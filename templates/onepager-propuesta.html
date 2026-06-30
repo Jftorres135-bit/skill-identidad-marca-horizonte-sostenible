@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<title>One-pager · Horizonte Sostenible</title>
+<link rel="stylesheet" href="../assets/tokens.css">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#333; }
+  /* Carta vertical para Playwright: 816×1056 (8.5×11in @96dpi). Ajusta viewport a esto. */
+  .page { width:816px; min-height:1056px; background:var(--hs-paper); display:flex; flex-direction:column; }
+
+  /* ===== BLOQUE MADRE (la marca se presenta) ===== */
+  .hero { background:var(--hs-green); color:var(--hs-cream); padding:56px 56px 48px; }
+  .hero .top { display:flex; align-items:center; gap:14px; margin-bottom:40px; }
+  .hero .top img { height:40px; }
+  .hero .top span { font-family:var(--font-mono); font-size:13px; letter-spacing:.08em; opacity:.7; }
+  .hero .eyebrow { font-family:var(--font-mono); font-size:13px; letter-spacing:.1em; color:var(--hs-amber); margin-bottom:14px; }
+  .hero h1 { font-family:var(--font-display); font-weight:700; letter-spacing:-0.022em; font-size:46px; line-height:1.04; max-width:18ch; }
+  .hero h1 .acento { color:var(--hs-amber); }
+
+  /* ===== TRANSICIÓN intencional (no degradado) ===== */
+  /* El corte entre capas es seco. Aquí termina la madre y empieza el trabajo. */
+
+  /* ===== BLOQUE TRABAJO (donde se trabaja) ===== */
+  .body { padding:48px 56px; flex:1; color:var(--hs-ink); }
+  .sectiontag { font-family:var(--font-mono); font-size:13px; letter-spacing:.04em; color:var(--hs-data); display:flex; align-items:center; gap:12px; margin:8px 0 24px; }
+  .sectiontag .num { color:var(--hs-gold); }
+  .sectiontag::after { content:''; flex:1; height:1px; background:var(--hs-line); }
+
+  .lead { font-family:var(--font-body); font-weight:300; font-size:18px; line-height:1.5; color:var(--hs-ink); max-width:62ch; margin-bottom:32px; }
+
+  .cols { display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; margin-bottom:36px; }
+  .card { background:var(--hs-panel); border:2px solid var(--hs-ink); border-radius:6px; padding:22px; }
+  .card .k { font-family:var(--font-mono); font-size:12px; letter-spacing:.06em; color:var(--hs-gold); margin-bottom:10px; }
+  .card .t { font-family:var(--font-display); font-weight:700; letter-spacing:-0.022em; font-size:22px; margin-bottom:8px; }
+  .card .d { font-family:var(--font-body); font-size:13px; line-height:1.45; color:var(--hs-data); }
+
+  .callout { border-left:2px solid var(--hs-gold); padding-left:14px; font-family:var(--font-mono); font-size:13px; line-height:1.5; color:var(--hs-data); margin-bottom:32px; }
+
+  .foot { margin-top:auto; padding:24px 56px; border-top:1px solid var(--hs-line); display:flex; justify-content:space-between; font-family:var(--font-mono); font-size:12px; color:var(--hs-data); }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- CAPA MADRE -->
+  <div class="hero hs-trama">
+    <div class="top"><img src="../assets/isotipo-crema.png" alt=""><span>▸ HORIZONTE SOSTENIBLE</span></div>
+    <div class="eyebrow">CONSULTORÍA ESG · LICENCIA SOCIAL · FORMACIÓN</div>
+    <h1>Llegamos preparados antes de que arranque el <span class="acento">reloj regulatorio.</span></h1>
+  </div>
+
+  <!-- CAPA DE TRABAJO -->
+  <div class="body">
+    <div class="sectiontag"><span class="num">01</span> El trabajo</div>
+    <p class="lead">Ordenamos, activamos y comunicamos la gestión ESG y la licencia social de tu empresa ante juntas, clientes y comunidades. No vendemos miedo ni humo: vendemos llegar a tiempo, con criterio.</p>
+
+    <div class="cols">
+      <div class="card"><div class="k">ORDENAR</div><div class="t">Gestión</div><div class="d">Doble materialidad, NIIF S2, indicadores.</div></div>
+      <div class="card"><div class="k">ACTIVAR</div><div class="t">Territorio</div><div class="d">Comunidades, confianza y presencia en campo.</div></div>
+      <div class="card"><div class="k">COMUNICAR</div><div class="t">Personas</div><div class="d">Pedagogía, formación, el lado humano.</div></div>
+    </div>
+
+    <div class="callout">El diagnóstico abre la conversación, no la cierra.</div>
+  </div>
+
+  <div class="foot">
+    <span>HORIZONTE SOSTENIBLE S.A.S. B.I.C.</span>
+    <span>horizontesostenible.com</span>
+  </div>
+
+</div>
+</body>
+</html>

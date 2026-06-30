@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<title>Diagnóstico ESG · Horizonte Sostenible</title>
+<link rel="stylesheet" href="../assets/tokens.css">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--hs-paper); font-family:var(--font-body); color:var(--hs-ink); padding:48px; }
+  .wrap { max-width:880px; margin:0 auto; }
+
+  .topnav { display:flex; align-items:center; justify-content:space-between; margin-bottom:40px; }
+  .topnav .brand { display:flex; align-items:center; gap:12px; }
+  .topnav .brand img { height:36px; }
+  .topnav .brand b { font-family:var(--font-display); font-weight:700; letter-spacing:-0.022em; font-size:18px; }
+  .topnav .url { font-family:var(--font-mono); font-size:12px; color:var(--hs-data); }
+
+  .sectiontag { font-family:var(--font-mono); font-size:13px; letter-spacing:.04em; color:var(--hs-data); display:flex; align-items:center; gap:12px; margin-bottom:24px; }
+  .sectiontag .num { color:var(--hs-gold); }
+  .sectiontag::after { content:''; flex:1; height:1px; background:var(--hs-line); }
+
+  h1 { font-family:var(--font-display); font-weight:700; letter-spacing:-0.022em; font-size:40px; margin-bottom:32px; }
+
+  /* STAT principal */
+  .scorecard { background:var(--hs-panel); border:2px solid var(--hs-ink); border-radius:8px; padding:36px; display:flex; align-items:baseline; gap:8px; margin-bottom:32px; }
+  .scorecard .num { font-family:var(--font-mono); font-weight:600; font-size:88px; line-height:1; }
+  .scorecard .den { font-family:var(--font-mono); font-size:32px; color:var(--hs-data); }
+  .scorecard .label { font-family:var(--font-mono); font-size:14px; letter-spacing:.06em; color:var(--hs-data); margin-left:auto; align-self:center; }
+
+  /* Acciones priorizadas */
+  .acciones h2 { font-family:var(--font-mono); font-size:14px; letter-spacing:.08em; color:var(--hs-data); margin-bottom:16px; }
+  .accion { display:flex; align-items:center; gap:18px; padding:18px 0; border-bottom:1px solid var(--hs-line); }
+  .accion .idx { font-family:var(--font-mono); font-size:16px; color:var(--hs-gold); min-width:28px; }
+  .accion .txt { font-family:var(--font-body); font-size:18px; }
+
+  /* Progress */
+  .progress { margin:32px 0; }
+  .progress .head { display:flex; justify-content:space-between; font-family:var(--font-mono); font-size:13px; color:var(--hs-data); margin-bottom:8px; }
+  .progress .track { height:8px; background:var(--hs-line); border-radius:3px; overflow:hidden; }
+  .progress .fill { height:100%; background:var(--hs-gold); width:64%; }
+
+  /* Callout: regla 2px + mono, nunca caja rellena */
+  .callout { border-left:2px solid var(--hs-gold); padding-left:14px; font-family:var(--font-mono); font-size:13px; line-height:1.5; color:var(--hs-data); margin-top:32px; }
+
+  .btn { font-family:var(--font-body); font-weight:500; font-size:16px; padding:14px 26px; border-radius:6px; background:var(--hs-ink); color:var(--hs-paper); border:none; cursor:pointer; margin-top:32px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="topnav">
+    <div class="brand"><img src="../assets/isotipo-color.png" alt=""><b>Horizonte Sostenible</b></div>
+    <span class="url">plataforma-esg-hs.netlify.app</span>
+  </div>
+
+  <div class="sectiontag"><span class="num">03</span> Resultados del diagnóstico</div>
+  <h1>Tu madurez ESG</h1>
+
+  <div class="scorecard">
+    <span class="num">68</span><span class="den">/100</span>
+    <span class="label">MADUREZ ESG · LÍNEA BASE</span>
+  </div>
+
+  <div class="progress">
+    <div class="head"><span>Completitud del diagnóstico</span><span>64%</span></div>
+    <div class="track"><div class="fill"></div></div>
+  </div>
+
+  <div class="acciones">
+    <h2>5 ACCIONES PRIORIZADAS</h2>
+    <div class="accion"><span class="idx">01 ·</span><span class="txt">Definir doble materialidad</span></div>
+    <div class="accion"><span class="idx">02 ·</span><span class="txt">Línea base de indicadores</span></div>
+    <div class="accion"><span class="idx">03 ·</span><span class="txt">Estructurar el cuerpo de gobernanza</span></div>
+    <div class="accion"><span class="idx">04 ·</span><span class="txt">Código de conducta de proveedores</span></div>
+    <div class="accion"><span class="idx">05 ·</span><span class="txt">Plan de medición de energía y GEI</span></div>
+  </div>
+
+  <div class="callout">El diagnóstico abre la conversación, no la cierra. Asistencia metodológica supervisada.</div>
+
+  <button class="btn">Agendar lectura de resultados</button>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<title>Carrusel · Horizonte Sostenible</title>
+<link rel="stylesheet" href="../assets/tokens.css">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#333; }
+  /* Cada .slide es 1080×1350 (4:5). Una por página al exportar a PDF. */
+  .slide {
+    width:1080px; height:1350px; position:relative; overflow:hidden;
+    display:flex; flex-direction:column; page-break-after:always;
+  }
+  .pad { padding:96px; flex:1; display:flex; flex-direction:column; }
+
+  /* --- PORTADA --- */
+  .s-portada { justify-content:space-between; }
+  .s-portada .tesis {
+    font-family:var(--font-display); font-weight:700; letter-spacing:-0.022em;
+    font-size:96px; line-height:1.02; color:var(--hs-cream); max-width:14ch;
+  }
+  .s-portada .tesis .acento { color:var(--hs-amber); }
+  .topbar { display:flex; align-items:center; gap:18px; }
+  .topbar img { height:64px; }
+  .topbar span { font-family:var(--font-mono); font-size:20px; letter-spacing:.08em; color:var(--hs-cream); opacity:.7; }
+  .footer-mono { font-family:var(--font-mono); font-size:22px; letter-spacing:.06em; color:var(--hs-amber); }
+
+  /* --- DATO --- */
+  .s-dato { justify-content:center; align-items:flex-start; gap:28px; }
+  .s-dato .eyebrow { font-family:var(--font-mono); font-size:24px; letter-spacing:.1em; color:var(--hs-amber); }
+  .s-dato .bignum { font-family:var(--font-mono); font-weight:600; font-size:200px; line-height:.9; color:var(--hs-cream); }
+  .s-dato .desc { font-family:var(--font-body); font-weight:300; font-size:40px; line-height:1.3; color:var(--hs-cream); max-width:20ch; }
+  .s-dato .handle { font-family:var(--font-mono); font-size:20px; letter-spacing:.08em; color:var(--hs-cream); opacity:.6; margin-top:auto; }
+
+  /* --- CTA --- */
+  .s-cta { justify-content:center; align-items:center; text-align:center; gap:40px; }
+  .s-cta .claim { font-family:var(--font-display); font-weight:700; letter-spacing:-0.022em; font-size:72px; line-height:1.05; color:var(--hs-cream); max-width:16ch; }
+  .s-cta .arrow { color:var(--hs-amber); }
+</style>
+</head>
+<body>
+
+<!-- PORTADA -->
+<div class="slide capa-madre hs-trama s-portada">
+  <div class="pad s-portada">
+    <div class="topbar">
+      <img src="../assets/isotipo-crema.png" alt="Horizonte Sostenible">
+      <span>▸ HORIZONTE SOSTENIBLE</span>
+    </div>
+    <p class="tesis">No vendemos sostenibilidad. <span class="acento">Hacemos que pase.</span></p>
+    <div class="footer-mono">horizontesostenible.com</div>
+  </div>
+</div>
+
+<!-- DATO -->
+<div class="slide capa-madre hs-trama s-dato">
+  <div class="pad s-dato">
+    <span class="eyebrow">30 JUN · ENTRA EN VIGENCIA</span>
+    <div class="bignum">EUDR</div>
+    <p class="desc">Si exportas a Europa, la sostenibilidad ya es un requisito.</p>
+    <span class="handle">▸ HORIZONTE SOSTENIBLE</span>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="slide capa-madre hs-trama s-cta">
+  <div class="pad s-cta">
+    <img src="../assets/isotipo-crema.png" alt="" style="height:120px">
+    <p class="claim">Haz tu diagnóstico gratis <span class="arrow">→</span></p>
+    <div class="footer-mono">horizontesostenible.com</div>
+  </div>
+</div>
+
+</body>
+</html>

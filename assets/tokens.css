@@ -1,0 +1,116 @@
+/* ============================================================
+   HORIZONTE SOSTENIBLE · TOKENS DE MARCA · v2026.06
+   Sistema de dos capas. NUNCA mezclar madre y trabajo
+   en un mismo bloque. La transición es intencional.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,300..600;1,300..500&display=swap');
+
+:root {
+  /* --- Tipografía --- */
+  --font-display: 'Familjen Grotesk', system-ui, sans-serif; /* títulos, tesis, énfasis. tracking -0.022em */
+  --font-body:    'IBM Plex Sans', system-ui, sans-serif;    /* cuerpo, lead, etiquetas */
+  --font-mono:    'IBM Plex Mono', ui-monospace, monospace;  /* DATOS, normas, figuras, etiquetas. nunca párrafos */
+
+  /* --- CAPA MADRE (oscura · presentación) --- */
+  /* Hero, portadas, propuestas, carruseles, navegación. Verde profundo + ámbar. */
+  --hs-green-900:  #0A2114;  /* verde 900 */
+  --hs-green:      #0E2A1A;  /* VERDE MADRE · fondo base de la capa madre */
+  --hs-green-700:  #16341F;  /* verde 700 */
+  --hs-root:       #1C6B3C;  /* verde raíz · acento LSO */
+  --hs-amber:      #E1A62E;  /* ÁMBAR · acento de marca, ≤8% de superficie */
+  --hs-gold:       #C9881F;  /* dorado rigor · acento ESG */
+  --hs-cream:      #F1EFE6;  /* crema · texto sobre verde */
+  --hs-hair:       rgba(241,239,230,.14); /* hairline sobre madre */
+
+  /* --- CAPA DE TRABAJO (clara · producto) --- */
+  /* Cuerpo web, formularios, diagnóstico, tablas, SaaS. Gris-papel frío, bordes negros 2px. */
+  --hs-paper:      #E4E6E3;  /* papel · fondo base de la capa de trabajo */
+  --hs-panel:      #EDEEEA;  /* panel */
+  --hs-input:      #FFFFFF;  /* input */
+  --hs-ink:        #16201A;  /* tinta · texto principal y bordes tablero */
+  --hs-data:       #5A635B;  /* dato · texto secundario */
+  --hs-line:       #CDD0CC;  /* línea hairline sobre papel */
+
+  /* --- Acentos por línea de servicio (dosis pequeñas) --- */
+  --hs-lso:        #1C6B3C;  /* Licencia Social · verde raíz */
+  --hs-esg:        #C9881F;  /* Consultoría ESG · dorado rigor */
+  --hs-formacion:  #C75B33;  /* Formación · terracota humano */
+
+  /* --- Geometría --- */
+  --r-3: 3px; --r-4: 4px; --r-6: 6px; --r-8: 8px;
+  --border-hair: 1px;   /* hairline */
+  --border-board: 2px;  /* bordes de tablero · capa de trabajo */
+}
+
+/* Trama técnica diagonal 135° · ~2.5% blanco. Da cuerpo de "papel técnico". */
+.hs-trama {
+  background-image: repeating-linear-gradient(135deg,
+    rgba(255,255,255,.025) 0, rgba(255,255,255,.025) 1px,
+    transparent 1px, transparent 7px);
+}
+
+/* ===== CAPA MADRE ===== */
+.capa-madre {
+  background: var(--hs-green);
+  color: var(--hs-cream);
+  font-family: var(--font-body);
+}
+.capa-madre h1, .capa-madre h2, .capa-madre h3,
+.capa-madre .tesis {
+  font-family: var(--font-display);
+  letter-spacing: -0.022em;
+  font-weight: 700;
+  color: var(--hs-cream);
+}
+.capa-madre .acento { color: var(--hs-amber); }   /* UN énfasis ámbar por titular */
+.capa-madre .dato   { font-family: var(--font-mono); color: var(--hs-amber); }
+
+/* ===== CAPA DE TRABAJO ===== */
+.capa-trabajo {
+  background: var(--hs-paper);
+  color: var(--hs-ink);
+  font-family: var(--font-body);
+}
+.capa-trabajo h1, .capa-trabajo h2, .capa-trabajo h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.022em;
+  font-weight: 700;
+  color: var(--hs-ink);
+}
+.capa-trabajo .panel {
+  background: var(--hs-panel);
+  border: var(--border-board) solid var(--hs-ink);
+  border-radius: var(--r-6);
+}
+.capa-trabajo .dato { font-family: var(--font-mono); color: var(--hs-data); }
+
+/* ===== Componentes compartidos ===== */
+.hs-sectiontag {            /* 03 Color · número + etiqueta + regla */
+  font-family: var(--font-mono);
+  font-size: 13px; letter-spacing: .04em;
+  display: flex; align-items: center; gap: 12px;
+}
+.hs-sectiontag .num { color: var(--hs-amber); }
+.hs-sectiontag::after { content: ''; flex: 1; height: 1px; background: currentColor; opacity: .25; }
+
+.hs-callout {               /* regla 2px + texto mono. NUNCA caja de color rellena */
+  border-left: var(--border-board) solid var(--hs-amber);
+  padding-left: 14px;
+  font-family: var(--font-mono);
+  font-size: 13px; line-height: 1.5;
+}
+
+.hs-stat .num { font-family: var(--font-mono); font-weight: 600; }
+.hs-stat .den { font-family: var(--font-mono); opacity: .6; }
+
+.hs-btn {
+  font-family: var(--font-body); font-weight: 500;
+  padding: 12px 22px; border-radius: var(--r-6);
+  background: var(--hs-amber); color: var(--hs-green);
+  border: none; cursor: pointer;
+}
+.hs-btn--ghost {
+  background: transparent; color: var(--hs-cream);
+  border: var(--border-hair) solid var(--hs-hair);
+}

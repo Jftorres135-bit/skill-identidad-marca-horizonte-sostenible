@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<title>Papelería · Horizonte Sostenible</title>
+<link rel="stylesheet" href="../assets/tokens.css">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#dcdcd6; font-family:var(--font-body); padding:48px; display:flex; flex-wrap:wrap; gap:48px; align-items:flex-start; }
+  .label { font-family:var(--font-mono); font-size:12px; letter-spacing:.08em; color:#555; margin-bottom:12px; }
+
+  /* ===== TARJETA · capa madre (90×50mm ≈ 340×189px @96dpi) ===== */
+  .tarjeta { width:340px; height:189px; background:var(--hs-green); color:var(--hs-cream); border-radius:6px; padding:24px; display:flex; flex-direction:column; justify-content:space-between; }
+  .tarjeta .top img { height:30px; }
+  .tarjeta .name { font-family:var(--font-display); font-weight:700; letter-spacing:-0.022em; font-size:20px; }
+  .tarjeta .role { font-family:var(--font-mono); font-size:10px; letter-spacing:.08em; color:var(--hs-amber); margin-top:2px; }
+  .tarjeta .meta { font-family:var(--font-mono); font-size:10px; line-height:1.5; color:var(--hs-cream); opacity:.8; margin-top:10px; }
+
+  /* ===== MEMBRETE · capa de trabajo ===== */
+  .membrete { width:420px; min-height:300px; background:var(--hs-input); border:2px solid var(--hs-ink); border-radius:6px; padding:28px; }
+  .membrete .head { display:flex; align-items:center; gap:10px; padding-bottom:16px; border-bottom:1px solid var(--hs-line); }
+  .membrete .head img { height:32px; }
+  .membrete .head .org b { font-family:var(--font-display); font-weight:700; letter-spacing:-0.022em; font-size:16px; color:var(--hs-ink); display:block; }
+  .membrete .head .org span { font-family:var(--font-mono); font-size:10px; color:var(--hs-data); }
+  .membrete .placeholder { font-family:var(--font-body); font-weight:300; font-size:13px; color:var(--hs-data); margin-top:20px; line-height:1.6; }
+
+  /* ===== FIRMA DE CORREO ===== */
+  .firma { width:420px; background:#fff; border:1px solid var(--hs-line); border-radius:6px; padding:18px; display:flex; align-items:center; gap:14px; }
+  .firma img { height:44px; }
+  .firma .col { border-left:2px solid var(--hs-amber); padding-left:14px; }
+  .firma .col .n { font-family:var(--font-display); font-weight:700; letter-spacing:-0.022em; font-size:15px; color:var(--hs-ink); }
+  .firma .col .o { font-family:var(--font-body); font-size:12px; color:var(--hs-data); }
+  .firma .col .w { font-family:var(--font-mono); font-size:11px; color:var(--hs-gold); margin-top:2px; }
+</style>
+</head>
+<body>
+
+<div>
+  <div class="label">TARJETA · CAPA MADRE</div>
+  <div class="tarjeta hs-trama">
+    <div class="top"><img src="../assets/isotipo-crema.png" alt=""></div>
+    <div>
+      <div class="name">Laura Méndez</div>
+      <div class="role">DIRECTORA · LICENCIA SOCIAL</div>
+      <div class="meta">laura@horizontesostenible.com<br>Bogotá · CO</div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <div class="label">MEMBRETE · CAPA DE TRABAJO</div>
+  <div class="membrete">
+    <div class="head">
+      <img src="../assets/isotipo-verde.png" alt="">
+      <div class="org"><b>Horizonte Sostenible</b><span>S.A.S. B.I.C. · NIT 901.XXX.XXX</span></div>
+    </div>
+    <div class="placeholder">[ Cuerpo del documento · IBM Plex Sans Regular 400 ]</div>
+  </div>
+</div>
+
+<div>
+  <div class="label">FIRMA DE CORREO</div>
+  <div class="firma">
+    <img src="../assets/isotipo-color.png" alt="">
+    <div class="col">
+      <div class="n">Laura Méndez</div>
+      <div class="o">Horizonte Sostenible</div>
+      <div class="w">horizontesostenible.com</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
