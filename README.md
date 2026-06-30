@@ -48,7 +48,7 @@ marca-horizonte-sostenible/
 La skill vive en el directorio de skills de usuario de Claude. Copia la carpeta completa **sin renombrarla ni separar sus archivos** (las plantillas referencian `../assets/` con rutas relativas):
 
 ```bash
-git clone https://github.com/Jftorres135-bit/marca-horizonte-sostenible.git
+git clone https://github.com/Jftorres135-bit/skill-identidad-marca-horizonte-sostenible.git
 # Copia la carpeta a tu directorio de skills de Claude
 ```
 
